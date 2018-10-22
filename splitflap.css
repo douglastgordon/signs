@@ -18,11 +18,12 @@
   position: relative;
   transform-origin: 100% 51px;
   color: white;
+  transform-style: preserve-3d;
+
 }
 
 .flap.animate {
   transition: 0.6s;
-  transform-style: preserve-3d;
 }
 
 .bottom {
