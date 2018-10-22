@@ -1,11 +1,13 @@
 .flip-container {
   perspective: 1000px;
-  position: relative;
+  position: absolute;
+  left: 0;
 }
 
 .flip-container:hover .flap {
   transform: rotateX(-180deg);
 }
+
 
 .flip-container, .top, .bottom {
   width: 70px;
@@ -68,10 +70,10 @@
 }
 
 
-/* .flaps {
+.flaps {
   display: flex;
+  align-items: center;
   width: 70px;
   height: 50px;
-  align-items: center;
-  justify-content: center;
-} */
+  position: absolute;
+}
