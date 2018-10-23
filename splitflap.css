@@ -19,7 +19,6 @@
   transform-origin: 100% 51px;
   color: white;
   transform-style: preserve-3d;
-
 }
 
 .flap.animate {
@@ -34,6 +33,8 @@
   font-size: 72px;
   color: white;
   font-family: Helvetica;
+  backface-visibility: hidden;
+
 }
 
 .top, .bottom {
