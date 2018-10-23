@@ -2,6 +2,7 @@
   perspective: 1000px;
   position: absolute;
   left: 0;
+  top: 0;
 }
 
 .flip-container:hover .flap {
@@ -10,13 +11,13 @@
 
 
 .flip-container, .top, .bottom {
-  width: 70px;
-  height: 50px;
+  width: 50px;
+  height: 30px;
 }
 
 .flap {
   position: relative;
-  transform-origin: 100% 51px;
+  transform-origin: 100% 31px;
   color: white;
   transform-style: preserve-3d;
 }
@@ -32,7 +33,7 @@
 .flap {
   font-size: 72px;
   color: white;
-  font-family: Helvetica;
+  font-family: 'Roboto Mono', monospace;
   backface-visibility: hidden;
 
 }
@@ -46,13 +47,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: #202020;
   overflow-y: hidden;
 }
 
 .bottom span {
   position: absolute;
-  top: -39px;
+  top: -50px;
 }
 .top span {
   position: absolute;
@@ -62,7 +63,9 @@
 .flaps {
   display: flex;
   align-items: center;
-  width: 70px;
-  height: 50px;
+  width: 50px;
+  height: 61px;
   position: absolute;
+  border: 5px solid #202020;
+  background-color: black;
 }
