@@ -39,7 +39,7 @@ const nextFlap = FLAPDATA => {
   const flipUpBack = () => tops.unshift(currentDown)
   flipDownFront()
   flipUpBack()
-  setTimeout(() => setZs(FLAPDATA), 1000)
+  setTimeout(() => setZs(FLAPDATA), 600)
 }
 
 const makeFlapNode = ({id, top, bottom}) => {
@@ -112,12 +112,24 @@ const createDOMFlap = ({ id, flaps, tops, bottoms }, parentId) => {
 
 }
 
+const flipTo = (FLAPDATA, value) => {
+  const { values, tops } = FLAPDATA
+    const interval = setInterval(() => {
+      nextFlap(FLAPDATA)
+      if (tops[tops.length - 1].top === value) {
+        clearInterval(interval)
+      }
+    }, 600)
+  return true
+}
 
 const createSign = (values, id) => {
   const FLAPDATA = createFlapData(values)
   createDOMFlap(FLAPDATA, id)
   return {
     increment: () => nextFlap(FLAPDATA),
+    flipTo: (value) => flipTo(FLAPDATA, value),
+    FLAPDATA,
   }
 }
 
